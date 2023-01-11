@@ -9,6 +9,7 @@
 #' @param n_eff Numeric. Effective sample size. Might be taken from the outputs of \code{howBadIsIt}.
 #' @param ddc Numeric. Data defect correlation. Might be taken from the outputs of \code{howBadIsIt}.
 #' @param nSim Numeric. Number of samples to simulate. nSim SRSs and large, biased samples will be simulated.
+#' @param truth Numeric. Population mean.
 #' @return A data.frame with eight columns: smallSRSEstimate = Estimate of the population mean from the SRS of size n_eff; largeBiasedEstimate = estimate of population mean from the biased sample of size n;
 #' smallSRSCoverage = % of (Wald) confidence intervals from the simulated SRSs covering the true population mean;
 #' largeBiasedCoverage =  % of (Wald) confidence intervals from the simulated biased samples of size n covering the true population mean;
@@ -17,7 +18,7 @@
 #' @details The function returns various quantities of interest defined in Meng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 us presidential election. Annals of Applied Statistics, 12(2), 685-726. https://doi.org/10.1214/18-AOAS1161SF
 #' @export
 
-simulateSamples <- function(dat, N, n, n_eff, ddc, nSim) {
+simulateSamples <- function(dat, N, n, n_eff, ddc, nSim, truth) {
 
   stats <- lapply(1:nSim,
                   function(x) {
