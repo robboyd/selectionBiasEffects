@@ -95,7 +95,7 @@ ggplot(data = stats2, aes(x = value, fill = samp), colour = c("red", "blue")) +
 
 
 ```
-
+![plot of chunk unnamed-chunk-4](man/figure/Error.png)
 ## References
 
 1. Morton, D. et al. (2014) Land Cover Map 2007 (1km percentage target class, GB) v1.2.11112
