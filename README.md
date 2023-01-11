@@ -1,4 +1,6 @@
 # selectionBiasEffects
+
+This vignette does not automatically render because it is fairly computationally demanding. I will update it as often as possible, but it may be slightly out of date.
 ## Introduction
 
 The sample mean is the most common estimator of the population mean. Where there is a selection bias, however, it is likely to be a biased one. In this document, I demonstrate this unfortunate property of the sample mean using an example from biodiversity science. 
@@ -44,7 +46,7 @@ stats <- simulateSamples(dat = Calluna,
                          n_eff = calStats$nEff,
                          ddc = calStats$d1,
                          truth = calStats$ybar_pop,
-                         nSim = 100)
+                         nSim = 1000)
 
 head(stats)
 
