@@ -4,7 +4,7 @@
 \alias{simulateSamples}
 \title{\code{simulateSamples}}
 \usage{
-simulateSamples(dat, N, n, n_eff, ddc, nSim)
+simulateSamples(dat, N, n, n_eff, ddc, nSim, truth)
 }
 \arguments{
 \item{dat}{string. A data.frame containing two columns: R, which is denotes sample membership and must take values {0,1};
@@ -19,6 +19,8 @@ and Y, which is the variable of interest. The function will throw an error is co
 \item{ddc}{Numeric. Data defect correlation. Might be taken from the outputs of \code{howBadIsIt}.}
 
 \item{nSim}{Numeric. Number of samples to simulate. nSim SRSs and large, biased samples will be simulated.}
+
+\item{truth}{Numeric. Population mean.}
 }
 \value{
 A data.frame with eight columns: smallSRSEstimate = Estimate of the population mean from the SRS of size n_eff; largeBiasedEstimate = estimate of population mean from the biased sample of size n;
